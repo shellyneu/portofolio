@@ -261,7 +261,7 @@ export default function Home() {
                     <img
                       alt="Shellyn Euriska Putri Portrait"
                       className="w-full h-full object-cover object-center grayscale contrast-105 group-hover:grayscale-0 transition-all duration-700 ease-out"
-                      src="/images/profile.JPG"
+                      src="/images/profile.jpg"
                     />
                     {/*  Gradient Vignette  */}
                     <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/10 to-transparent"></div>
