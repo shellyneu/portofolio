@@ -1,26 +1,60 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --color-canvas: #FBFBF9;
+    --color-canvas-alt: #F5F5F2;
+    --color-surface-pure: #FFFFFF;
+    --color-border-fine: rgba(226, 228, 233, 0.8);
+    --color-border-dark: rgba(26, 26, 30, 0.12);
+    --color-ink-primary: #121316;
+    --color-ink-secondary: #3F4248;
+    --color-ink-muted: #5F636B;
+    --color-blush-accent: #D4A5A5;
+    --color-blush-soft: #F4EAE8;
+    --color-blush-tint: rgba(212, 165, 165, 0.14);
+    --color-charcoal: #1A1A1E;
+    --color-terminal-bg: #141416;
+    --font-sans: var(--font-plus-jakarta-sans), var(--font-inter), sans-serif;
+    --font-mono: var(--font-jetbrains-mono), monospace;
+    --font-serif: var(--font-newsreader), Georgia, serif;
+    --font-display: var(--font-plus-jakarta-sans), sans-serif;
+    --animate-marquee-slow: marquee 32s linear infinite;
+    --animate-marquee-reverse: marquee-reverse 36s linear infinite;
+    --animate-pulse-subtle: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    @keyframes marquee-reverse {
+        0% {
+            transform: translateX(-50%);
+        }
+
+        100% {
+            transform: translateX(0%);
+        }
+    }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.bg-grid-hairline {
+    background-size: 40px 40px;
+    background-image:
+        linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.custom-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+::selection {
+    background-color: #F4EAE8;
+    color: #1A1A1E;
 }
